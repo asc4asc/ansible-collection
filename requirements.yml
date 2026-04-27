@@ -1,0 +1,5 @@
+collections:
+  - name: asc4asc.ansible_collection
+    source: https://github.com/asc4asc/ansible-collection.git
+    type: git
+    version: main        # oder Tag, z.B. "v1.2.0"
