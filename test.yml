@@ -1,5 +1,7 @@
-#!/usr/bin/ansible-playbook --inventory=localhost, -c=local
-# ansible-galaxy collection install git+https://github.com/asc4asc/asc4asc.git
+#!/usr/bin/ansible-playbook --connection=local --inventory=localhost,
+# ansible-galaxy collection install git+https://github.com/asc4asc/ansible-collection.git
+# ansible-galaxy collection install -r requirements.yml
+# ansible-galaxy collection list
 ---
 - hosts: localhost
   gather_facts: false
@@ -7,3 +9,5 @@
     - name: Test module
       asc4asc.show_collection.hello:
         name: Andreas
+  roles:
+    - asc4asc.show_collection.hello
