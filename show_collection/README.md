@@ -4,4 +4,4 @@ Documentation for the collection.
 
 Use -v 
 
-Example: ansible-playbook menu/collection_test.yml -v
+Example: ansible-playbook collection_test.yml -v
