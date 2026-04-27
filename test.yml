@@ -1,0 +1,9 @@
+#!/usr/bin/ansible-playbook --inventory=localhost, -c=local
+# ansible-galaxy collection install git+https://github.com/asc4asc/asc4asc.git
+---
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Test module
+      asc4asc.show_collection.hello:
+        name: Andreas
